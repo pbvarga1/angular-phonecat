@@ -1,0 +1,6 @@
+FROM joyzoursky/python-chromedriver:3.7-selenium
+
+COPY . /tests
+RUN pip install pytest pytest-bdd
+
+CMD ["pytest", "/tests", "-v"]

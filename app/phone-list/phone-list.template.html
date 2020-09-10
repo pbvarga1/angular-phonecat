@@ -5,12 +5,12 @@
 
       <p>
         Search:
-        <input ng-model="$ctrl.query" />
+        <input ng-model="$ctrl.query" id="phone-search" />
       </p>
 
       <p>
         Sort by:
-        <select ng-model="$ctrl.orderProp">
+        <select ng-model="$ctrl.orderProp" id="sort-by">
           <option value="name">Alphabetical</option>
           <option value="age">Newest</option>
         </select>
@@ -26,7 +26,7 @@
           <a href="#!/phones/{{phone.id}}" class="thumb">
             <img ng-src="{{phone.imageUrl}}" alt="{{phone.name}}" />
           </a>
-          <a href="#!/phones/{{phone.id}}">{{phone.name}}</a>
+          <a href="#!/phones/{{phone.id}}" id="{{phone.id}}" class="phone-link">{{phone.name}}</a>
           <p>{{phone.snippet}}</p>
         </li>
       </ul>
